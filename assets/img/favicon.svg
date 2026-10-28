@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path d="M6 62V30a26 26 0 0 1 52 0v32z" fill="#211c18"/>
+  <path d="M11 62V30a21 21 0 0 1 42 0v32" fill="none" stroke="#c8772f" stroke-width="1.4"/>
+  <text x="32" y="48" text-anchor="middle" font-family="Didot, 'Bodoni 72', Georgia, serif" font-style="italic" font-weight="600" font-size="30" fill="#f3f1eb">P</text>
+</svg>
