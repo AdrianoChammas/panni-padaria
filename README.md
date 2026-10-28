@@ -1,52 +1,71 @@
 # Panni Padaria Artesanal — site
 
-Site da **Panni Padaria Artesanal**, padaria na Zona Norte de São Paulo, com unidades em Água Fria (Rua Ismael Neri, 485) e na Casa Verde (Av. Braz Leme, 606).
+Site da **Panni Padaria Artesanal**, padaria na Zona Norte de São Paulo com duas casas: **Água Fria** (Rua Ismael Neri, 485) e **Casa Verde** (Av. Braz Leme, 606).
 
-Página única, estática (HTML, CSS e JavaScript puros, sem build), pronta para o GitHub Pages.
+Estático (HTML, CSS e JavaScript puros, sem build), pronto para o GitHub Pages.
 
 ## O que tem
 
-- **Abertura** com o slogan da casa, chamadas para o cardápio e para o pedido online, e o aviso "aberto agora" calculado pelo horário de São Paulo (muda ao longo do dia: café da manhã, almoço executivo, brunch, pizza + vinho).
-- **O dia na Panni**: abas de manhã, almoço, tarde e noite com uma régua de horário. A página abre no período atual.
-- **Vitrine**: pães, croissants (tradicional, queijo e presunto, chocolate Callebaut), cafés, pizza romana e o balcão.
-- **À noite**: a promoção de segunda a quarta após as 19h, fatia de pizza romana + taça de vinho por R$ 39,90 (margherita, abobrinha, calabresa).
-- **O salão**: Wi-Fi e tomadas para quem trabalha de lá.
-- **Eventos**: Espazio Napoli (40 sentados / 60 em pé) e Estanza Firenze (15 sentados / 20 em pé), com link para agendar degustação e visita.
-- **Unidades**: endereço, telefone e rota no Google Maps das duas casas.
-- Tema claro e escuro automático, menu em gaveta no celular, navegação por teclado, foco visível, textos alternativos e `prefers-reduced-motion` respeitado.
-- Dados estruturados (schema.org `Bakery`) das duas unidades para o Google.
+Uma página de entrada e uma página para cada casa, cada uma com a sua cor.
 
-Referência estética: [Saint Tropez Experience](https://apxweb.github.io/saint-tropez-experience/) (janelas em arco, serifada de título grande, abertura animada).
+- **Página inicial** (`index.html`)
+  - As duas casas lado a lado como "portas": a que está sob o cursor se abre, a foto acompanha o mouse e mostra o resumo da casa. No celular, as portas ficam uma sobre a outra.
+  - Farinha caindo sobre as portas, que se afasta do cursor (ou do dedo).
+  - Quem somos, com o jeito de cada casa; o dia na Panni (abas de manhã, almoço, tarde e noite, abrindo no período atual); a promoção pizza + vinho; um cardápio por casa; endereço, telefone e WhatsApp das duas unidades.
+- **Água Fria** (`agua-fria/`), em tom de tijolo: abertura com a fachada do casarão, a casa, o salão (faixa de fotos com setas), à mesa, **eventos** (Espazio Napoli e Estanza Firenze), visita com horário da semana e mapa.
+- **Casa Verde** (`casa-verde/`), em verde com o dourado das lâmpadas: abertura com a fachada à noite, a casa, o salão, a calçada (drinks e vinho), à mesa, visita e mapa.
+- **Cardápio de cada casa** (`agua-fria/cardapio.html`, `casa-verde/cardapio.html`): as páginas do cardápio impresso, que abrem em tamanho grande.
+- Seletor "Água Fria | Casa Verde" sempre no cabeçalho. Ao trocar de casa, uma cortina na cor do destino cobre a tela com o logo.
+- Aviso "aberto agora" pelo horário de São Paulo; o dia de hoje fica marcado no horário da semana.
+- O mapa do Google só carrega quando a pessoa clica em "Mostrar o mapa".
+- Tema claro e escuro automático, navegação por teclado, foco visível, textos alternativos. Com `prefers-reduced-motion`, cortina, farinha e efeitos de cursor ficam desligados.
+- Dados estruturados (schema.org `Bakery`) de cada unidade.
+
+Referência: [Famiglia Mancini, proposta 2](https://apxweb.github.io/famiglia-mancini-proposta-2/) (uma página por casa, cor por casa, transição entre casas, cena que reage ao cursor).
 
 ## Estrutura
 
 ```
-index.html              página e textos
-assets/css/styles.css   identidade visual e layout (cores no bloco :root do topo)
-assets/js/app.js        menu do celular, abas do dia e aviso "aberto agora"
-assets/img/             fotos e favicon
+index.html                 página inicial: as duas casas
+agua-fria/index.html       unidade Água Fria (com eventos)
+agua-fria/cardapio.html    cardápio de Água Fria
+casa-verde/index.html      unidade Casa Verde
+casa-verde/cardapio.html   cardápio da Casa Verde
+assets/css/styles.css      identidade visual; cores no :root do topo, cor de cada casa em [data-casa]
+assets/js/app.js           menu, abas, aviso de horário, cortina, portas, inclinação dos cartões, farinha, mapa
+assets/img/                fotos (af-* Água Fria, cv-* Casa Verde, mesa-*, cardapio-*), logo e favicon
 ```
+
+## Fotos
+
+As fotos das casas, dos pratos (`mesa-*`), dos cardápios e o logo vêm do acervo do site atual (pannipadaria.com.br, biblioteca de mídia do WordPress). Foram convertidas para WebP em dois tamanhos (o menor para celular).
+
+Para trocar ou acrescentar uma foto, mantenha o nome do arquivo ou gere os dois tamanhos (por exemplo `af-salao-900.webp` e `af-salao-1800.webp`). Fotos horizontais em boa resolução, com 1800 px de largura ou mais, ficam melhores nas aberturas.
 
 ## Antes de publicar
 
 | Item | Situação | Onde mudar |
 | --- | --- | --- |
-| Cores | **provisórias** (farinha, crosta dourada, oliva e vinho): as oficiais não puderam ser lidas do site atual | bloco `:root` no topo de `assets/css/styles.css` |
-| Logo | o nome "Panni" está escrito em fonte; não há arquivo do logo | `.marca` em `index.html` |
-| Fotos | **de banco de imagens** (Unsplash), só para a prévia | substitua os arquivos em `assets/img/` mantendo os nomes |
-| Horário | o site antigo diz 7h30–20h num lugar e 8h–22h em outro; usamos **8h às 22h** | `index.html` (selo, salão, unidades, schema) e `ABRE`/`FECHA` em `assets/js/app.js` |
-| WhatsApp | números não informados; o contato mostra só os telefones fixos | seção Unidades em `index.html` |
-| Cardápio | sem preços além da promoção; os botões levam ao cardápio e ao pedido online atuais | links em `index.html` |
+| Fotos de banco | `croissant.jpg`, `pizza.jpg`, `pizza-margherita.jpg` e `vinho.jpg` ainda são do Unsplash: não há fotos desses produtos no acervo | `assets/img/`, mantendo os nomes |
+| Fotos dos salões de eventos | Estanza Firenze usa a sala climatizada com varanda (bate com a descrição); para o Espazio Napoli usamos a mesa de bolo decorada. **Confirmar com a casa** | seção Eventos em `agua-fria/index.html` |
+| Cardápio Casa Verde | as imagens são de abril de 2023; os preços podem ter mudado. O de Água Fria é de agosto de 2026 | `assets/img/cardapio-cv-*.webp` |
+| Horário | o rodapé do site antigo diz 7h30–20h; as páginas das unidades dizem **8h às 22h**, que é o que usamos | páginas das casas (seção Visita), schema e `ABRE`/`FECHA` em `assets/js/app.js` |
+| WhatsApp | do site antigo: Água Fria (11) 2476-1341, Casa Verde (11) 3856-9390, eventos (11) 97552-2523. Confirmar se o de eventos é WhatsApp | links `wa.me` nas páginas |
+| Pedir online | o mesmo link do cardápio digital nas duas casas; confirmar se atende as duas | links `cardapiodigital.io` |
+| Cores | provisórias (tijolo e verde por casa, farinha e vinho no geral) | `:root` e `[data-casa]` em `assets/css/styles.css` |
+| Vídeo | o site atual tem um vídeo (`RENDER_PANNI.mp4`, 141 MB): grande demais para o Pages sem compressão | — |
 
 Dados da casa tirados do site atual (pannipadaria.com.br) em out/2026.
 
 ## Rodar localmente
 
-Abra `index.html` no navegador, ou sirva a pasta:
+As páginas das casas usam endereços de pasta (`agua-fria/`), então sirva a pasta em vez de abrir o arquivo direto:
 
 ```bash
 py -m http.server 8417
 ```
+
+e abra `http://localhost:8417`.
 
 ## Publicar no GitHub Pages
 

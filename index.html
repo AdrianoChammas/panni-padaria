@@ -3,21 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Panni Padaria Artesanal</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Panni Padaria Artesanal, na Zona Norte de São Paulo. Café da manhã, almoço executivo, café da tarde e, à noite, pizza romana com vinho. Unidades Água Fria e Casa Verde.">
+<title>Panni Padaria Artesanal · Água Fria e Casa Verde</title>
+<meta name="description" content="Panni Padaria Artesanal, na Zona Norte de São Paulo: duas casas, em Água Fria e na Casa Verde. Café da manhã, almoço executivo, brunch e, à noite, pizza romana com vinho.">
 <meta name="theme-color" content="#f3f1eb" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16120f" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Panni Padaria Artesanal">
-<meta property="og:description" content="Sua padaria para todas as ocasiões. Do croissant da manhã à pizza romana com vinho da noite.">
-<meta property="og:image" content="assets/img/pao-rustico.jpg">
+<meta property="og:description" content="Uma padaria, duas casas na Zona Norte de São Paulo: o casarão de Água Fria e a Casa Verde.">
+<meta property="og:image" content="assets/img/af-letreiro-1800.webp">
 <meta property="og:locale" content="pt_BR">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Schibsted+Grotesk:wght@400..700&display=swap">
-<link rel="preload" as="image" href="assets/img/pao-rustico.jpg">
 
 <script type="application/ld+json">
 {
@@ -26,7 +24,7 @@
     {
       "@type": "Bakery",
       "name": "Panni Padaria Artesanal · Água Fria",
-      "url": "https://pannipadaria.com.br",
+      "url": "https://adrianochammas.github.io/panni-padaria/agua-fria/",
       "telephone": "+55-11-2476-1341",
       "email": "contato@pannipadaria.com",
       "servesCuisine": ["Padaria", "Café", "Pizza romana"],
@@ -37,7 +35,7 @@
     {
       "@type": "Bakery",
       "name": "Panni Padaria Artesanal · Casa Verde",
-      "url": "https://pannipadaria.com.br",
+      "url": "https://adrianochammas.github.io/panni-padaria/casa-verde/",
       "telephone": "+55-11-3856-9390",
       "email": "contato@pannipadaria.com",
       "servesCuisine": ["Padaria", "Café", "Pizza romana"],
@@ -49,32 +47,41 @@
 }
 </script>
 
-<link rel="stylesheet" href="assets/css/styles.css?v=1">
-<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="assets/css/styles.css?v=2">
+<script>(function(d){d.classList.add('js');try{var c=sessionStorage.getItem('panni.cortina');sessionStorage.removeItem('panni.cortina');if(c&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('chegando');d.style.setProperty('--cortina',c)}}catch(e){}})(document.documentElement)</script>
 </head>
 <body>
+<div class="cortina" aria-hidden="true"><span class="logo"></span></div>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="topo" id="topo">
   <div class="wrap">
-    <a class="marca" href="#conteudo" aria-label="Panni Padaria Artesanal, início"><b>Panni</b><small>Padaria Artesanal</small></a>
+    <a class="marca" href="./" aria-label="Panni Padaria Artesanal, início"><span class="logo"></span></a>
     <nav class="nav" aria-label="Principal">
+      <a href="#casas">As casas</a>
       <a href="#dia">O dia</a>
-      <a href="#vitrine">Vitrine</a>
       <a href="#noite">À noite</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#unidades">Unidades</a>
+      <a href="#cardapios">Cardápios</a>
+      <a href="#onde">Onde</a>
+    </nav>
+    <nav class="casas-switch" aria-label="Entrar em uma casa">
+      <a href="agua-fria/" data-casa-link="agua-fria">Água Fria</a>
+      <a href="casa-verde/" data-casa-link="casa-verde">Casa Verde</a>
     </nav>
     <a class="btn btn-forno" href="https://cardapiodigital.io/pannipadariaartesanal" target="_blank" rel="noopener">Pedir online</a>
     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="gaveta">Menu</button>
   </div>
   <div class="wrap">
     <nav class="gaveta" id="gaveta" aria-label="Menu" hidden>
+      <a href="#casas">As casas</a>
       <a href="#dia">O dia na Panni</a>
-      <a href="#vitrine">Vitrine</a>
       <a href="#noite">Pizza e vinho</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#unidades">Unidades</a>
+      <a href="#cardapios">Cardápios</a>
+      <a href="#onde">Onde estamos</a>
+      <div class="gaveta-casas">
+        <a href="agua-fria/" data-casa-link="agua-fria">Entrar em Água Fria</a>
+        <a href="casa-verde/" data-casa-link="casa-verde">Entrar na Casa Verde</a>
+      </div>
       <a class="btn btn-forno" href="https://cardapiodigital.io/pannipadariaartesanal" target="_blank" rel="noopener">Pedir online</a>
     </nav>
   </div>
@@ -87,19 +94,68 @@
     <div class="wrap">
       <div>
         <span class="eyebrow anima">Padaria artesanal · Zona Norte de SP</span>
-        <h1 id="titulo" class="anima">Sua padaria para <em>todas as ocasiões.</em></h1>
-        <p class="lead anima">Croissant e café pela manhã, almoço executivo no meio do dia, brunch no fim de semana e, quando escurece, pizza romana com uma taça de vinho. Em Água Fria e na Casa Verde.</p>
-        <div class="acoes anima">
-          <a class="btn btn-forno" href="https://pannipadaria.com.br/cardapiopanni/">Ver o cardápio</a>
-          <a class="btn btn-linha" href="https://cardapiodigital.io/pannipadariaartesanal" target="_blank" rel="noopener">Pedir online
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-        </div>
-        <p class="agora anima" id="agora" aria-live="polite"><i></i><span>Todos os dias, das 8h às 22h</span></p>
+        <h1 id="titulo" class="anima">Uma padaria, <em>duas casas.</em></h1>
       </div>
-      <div class="janela">
-        <div class="arco"><img src="assets/img/pao-rustico.jpg" alt="Pão rústico de casca dourada, polvilhado com farinha" width="1400" height="933" fetchpriority="high"></div>
-        <div class="medalha"><img src="assets/img/croissant.jpg" alt="Croissants recém-saídos do forno" width="1400" height="933" loading="lazy"></div>
-        <p class="selo" aria-hidden="true">Das 8h<br>às 22h<b>todo dia</b></p>
+      <div>
+        <p class="lead anima">O casarão de tijolo entre as árvores de Água Fria e a casa da Avenida Braz Leme. A mesma Panni, do pão na chapa à pizza do fim do dia. Escolha por onde entrar.</p>
+        <p class="agora anima" data-status aria-live="polite"><i></i><span>As duas casas, todos os dias, das 8h às 22h</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- As portas -->
+  <section class="portas-wrap" id="casas" aria-label="As casas da Panni">
+    <div class="portas">
+      <a class="porta" href="agua-fria/" data-casa-link="agua-fria">
+        <img src="assets/img/af-fachada-1800.webp" srcset="assets/img/af-fachada-900.webp 900w, assets/img/af-fachada-1800.webp 1800w" sizes="(max-width: 760px) 100vw, 64vw" width="1800" height="1012" fetchpriority="high"
+          alt="Fachada da Panni em Água Fria: casarão de tijolo aparente com janelas de madeira, telhado colonial e jardim na calçada.">
+        <span class="num">Unidade 1</span>
+        <h2>Água <em>Fria</em></h2>
+        <span class="end">Rua Ismael Neri, 485</span>
+        <div class="detalhe">
+          <p>Um casarão rústico numa rua cheia de árvores, com varanda, espaço kids e dois salões para eventos.</p>
+          <span class="entrar">Entrar na casa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="porta" href="casa-verde/" data-casa-link="casa-verde">
+        <img src="assets/img/cv-noite-1329.webp" srcset="assets/img/cv-noite-900.webp 900w, assets/img/cv-noite-1329.webp 1329w" sizes="(max-width: 760px) 100vw, 64vw" width="1329" height="886" fetchpriority="high"
+          alt="Fachada da Panni Casa Verde à noite, com o letreiro iluminado, mesas na calçada e o salão aceso ao fundo.">
+        <span class="num">Unidade 2</span>
+        <h2>Casa <em>Verde</em></h2>
+        <span class="end">Av. Braz Leme, 606</span>
+        <div class="detalhe">
+          <p>Pães, doces e cheiro bom de café na Braz Leme. Salão amplo, mesas na calçada e drinks para o fim do dia.</p>
+          <span class="entrar">Entrar na casa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+    <canvas class="farinha" data-farinha aria-hidden="true"></canvas>
+  </section>
+
+  <!-- Quem somos -->
+  <section class="secao historia" aria-labelledby="historia-titulo">
+    <div class="wrap">
+      <div class="janela revela">
+        <div class="arco"><img src="assets/img/af-letreiro-900.webp" alt="Letreiro da Panni Padaria Artesanal entre as árvores, com um varal de lâmpadas acesas" loading="lazy" width="900" height="598"></div>
+        <div class="medalha"><img src="assets/img/mesa-brunch-900.webp" alt="Mesa de brunch com torrada de abacate, frios e sucos" loading="lazy" width="900" height="598"></div>
+      </div>
+      <div class="revela">
+        <span class="eyebrow">Quem somos</span>
+        <h2 id="historia-titulo">Do pão na chapa <em>à pizza da noite.</em></h2>
+        <p class="lead">Imagine uma padaria onde você toma o café com pão na chapa pela manhã e termina o dia com pizza e happy hour. Num ambiente agradável, intimista e informal, para passar horas sem ver o tempo passar.</p>
+        <p class="lead">Assim nasceu a Panni: uma padaria artesanal para qualquer hora do dia, seja um momento sozinho, um encontro com a família e os amigos ou uma reunião de trabalho.</p>
+        <div class="jeitos">
+          <div class="jeito" data-de="agua-fria">
+            <h3>Água Fria</h3>
+            <ul><li>Casarão de tijolo entre árvores</li><li>Varanda e espaço kids</li><li>Dois salões para eventos</li></ul>
+            <a href="agua-fria/" data-casa-link="agua-fria">Conhecer a casa</a>
+          </div>
+          <div class="jeito" data-de="casa-verde">
+            <h3>Casa Verde</h3>
+            <ul><li>Na Avenida Braz Leme</li><li>Salão amplo e arejado</li><li>Mesas na calçada e drinks</li></ul>
+            <a href="casa-verde/" data-casa-link="casa-verde">Conhecer a casa</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -108,7 +164,7 @@
   <section class="secao dia" id="dia" aria-labelledby="dia-titulo">
     <div class="wrap">
       <div class="cab revela">
-        <span class="eyebrow">O dia na Panni</span>
+        <span class="eyebrow">O dia na Panni, nas duas casas</span>
         <h2 id="dia-titulo">Do primeiro café <em>à última taça.</em></h2>
         <p class="lead">A casa muda ao longo do dia. Escolha um horário e veja o que está saindo do forno.</p>
       </div>
@@ -128,7 +184,7 @@
       </div>
 
       <div class="painel" role="tabpanel" id="p-manha" aria-labelledby="t-manha">
-        <div class="foto"><img src="assets/img/croissants-vitrine.jpg" alt="Bandeja de croissants dourados na vitrine" loading="lazy" width="1400" height="933"></div>
+        <div class="foto"><img src="assets/img/croissant.jpg" alt="Croissants dourados recém-saídos do forno" loading="lazy" width="1400" height="933"></div>
         <div>
           <span class="eyebrow">Café da manhã</span>
           <h3>Manteiga, café <em>e forno quente.</em></h3>
@@ -137,14 +193,13 @@
             <li><b>Croissant tradicional</b><span>Massa folhada na manteiga</span></li>
             <li><b>Croissant de queijo e presunto</b><span>Quente, para o café salgado</span></li>
             <li><b>Croissant de chocolate</b><span>Recheio de chocolate Callebaut</span></li>
-            <li><b>Pães e cafés</b><span>Na chapa, no balcão ou para levar</span></li>
+            <li><b>Pão na chapa e cafés</b><span>No balcão ou na mesa</span></li>
           </ul>
-          <a class="btn btn-linha" href="https://pannipadaria.com.br/cardapiopanni/">Ver o cardápio da manhã</a>
         </div>
       </div>
 
       <div class="painel" role="tabpanel" id="p-almoco" aria-labelledby="t-almoco" hidden>
-        <div class="foto"><img src="assets/img/almoco.jpg" alt="Prato de carne grelhada com batatas" loading="lazy" width="1400" height="933"></div>
+        <div class="foto"><img src="assets/img/mesa-ovos-900.webp" alt="Prato com ovos mexidos, batatas e torrada, com azeite e pimenta à mesa" loading="lazy" width="900" height="598"></div>
         <div>
           <span class="eyebrow">Almoço executivo</span>
           <h3>Almoço de verdade, <em>no meio da semana.</em></h3>
@@ -154,12 +209,11 @@
             <li><b>Saladas e pratos leves</b><span>Para quem prefere algo fresco</span></li>
             <li><b>Sobremesa e café</b><span>Para fechar a refeição</span></li>
           </ul>
-          <a class="btn btn-linha" href="https://cardapiodigital.io/pannipadariaartesanal" target="_blank" rel="noopener">Pedir o almoço online</a>
         </div>
       </div>
 
       <div class="painel" role="tabpanel" id="p-tarde" aria-labelledby="t-tarde" hidden>
-        <div class="foto"><img src="assets/img/brunch.jpg" alt="Mesa de brunch com ovos, waffles, frutas e sucos" loading="lazy" width="1400" height="933"></div>
+        <div class="foto"><img src="assets/img/mesa-brunch-900.webp" alt="Mesa de brunch com torrada de abacate, frios, salada e sucos" loading="lazy" width="900" height="598"></div>
         <div>
           <span class="eyebrow">Café da tarde e brunch</span>
           <h3>A pausa da tarde <em>e o brunch de domingo.</em></h3>
@@ -169,7 +223,6 @@
             <li><b>Brunch</b><span>Sábados e domingos</span></li>
             <li><b>Wi-Fi e tomadas</b><span>Traga o notebook</span></li>
           </ul>
-          <a class="btn btn-linha" href="https://pannipadaria.com.br/cardapiopanni/">Ver o cardápio</a>
         </div>
       </div>
 
@@ -186,30 +239,6 @@
           </ul>
           <a class="btn btn-linha" href="#noite">Ver a promoção da noite</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vitrine -->
-  <section class="secao" id="vitrine" aria-labelledby="vitrine-titulo">
-    <div class="wrap">
-      <div class="cab revela">
-        <span class="eyebrow">A vitrine</span>
-        <h2 id="vitrine-titulo">Feito aqui, <em>todos os dias.</em></h2>
-        <p class="lead">Pães, folhados, pizza e pratos do balcão. O que está na vitrine muda ao longo do dia.</p>
-      </div>
-      <div class="vitrine-grade">
-        <figure class="peca p-a revela"><img src="assets/img/cesta-paes.jpg" alt="Cesta com pães de vários formatos" loading="lazy" width="1400" height="933"><figcaption><b>Pães artesanais</b><span>Da baguete ao pão de forma</span></figcaption></figure>
-        <figure class="peca p-b revela"><img src="assets/img/croissant.jpg" alt="Dois croissants sobre pedra escura" loading="lazy" width="1400" height="933"><figcaption><b>Croissants</b><span>Tradicional, presunto e queijo, chocolate</span></figcaption></figure>
-        <figure class="peca p-c revela"><img src="assets/img/cafes.jpg" alt="Mãos brindando com xícaras de cappuccino" loading="lazy" width="1400" height="933"><figcaption><b>Cafés</b><span>Do expresso ao cappuccino</span></figcaption></figure>
-        <figure class="peca p-d revela"><img src="assets/img/pizza.jpg" alt="Pizza assada com tomates e alecrim" loading="lazy" width="1400" height="933"><figcaption><b>Pizza romana</b><span>Em fatias, à noite</span></figcaption></figure>
-        <figure class="peca p-e revela"><img src="assets/img/balcao-paes.jpg" alt="Balcão de padaria com pães expostos em cestos" loading="lazy" width="1400" height="933"><figcaption><b>O balcão</b><span>Para levar ou comer aqui</span></figcaption></figure>
-      </div>
-      <div class="croissants revela">
-        <p>Croissants do dia:</p>
-        <span class="chip">Tradicional</span>
-        <span class="chip">Queijo e presunto</span>
-        <span class="chip">Chocolate Callebaut</span>
       </div>
     </div>
   </section>
@@ -239,118 +268,80 @@
     </div>
   </section>
 
-  <!-- O salão -->
-  <section class="secao salao" id="salao" aria-labelledby="salao-titulo">
+  <!-- Cardápios -->
+  <section class="secao" id="cardapios" aria-labelledby="cardapios-titulo">
     <div class="wrap">
-      <div class="foto revela"><img src="assets/img/salao.jpg" alt="Salão da padaria com mesas de madeira" loading="lazy" width="1400" height="933"></div>
-      <div class="revela">
-        <span class="eyebrow">O salão</span>
-        <h2 id="salao-titulo">Puxe uma cadeira <em>e fique.</em></h2>
-        <p class="lead">Para o café da manhã sem pressa, uma reunião ou uma tarde inteira de trabalho.</p>
-        <ul class="vantagens">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg>
-            <div><b>Wi-Fi para clientes</b><span>Peça a senha no balcão.</span></div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg>
-            <div><b>Tomadas nas mesas</b><span>Para carregar o notebook e o celular.</span></div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-            <div><b>Aberto o dia todo</b><span>Das 8h às 22h, inclusive fins de semana.</span></div>
-          </li>
-        </ul>
+      <div class="cab revela">
+        <span class="eyebrow">Cardápios</span>
+        <h2 id="cardapios-titulo">Um cardápio <em>para cada casa.</em></h2>
+        <p class="lead">Cada unidade tem o seu, com os pratos e preços de lá.</p>
+      </div>
+      <div class="cardapios-grade">
+        <a class="cardapio-cartao revela" href="agua-fria/cardapio.html" data-de="agua-fria" data-casa-link="agua-fria" data-tilt>
+          <div class="capa"><img src="assets/img/cardapio-af-1.webp" alt="" loading="lazy" width="1400" height="1980"></div>
+          <div>
+            <span class="eyebrow">Unidade 1</span>
+            <h3>Água Fria</h3>
+            <p>Do café da manhã à pizza da noite, com os pratos e preços da casa de Água Fria.</p>
+            <span class="mais">Abrir o cardápio <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="cardapio-cartao revela" href="casa-verde/cardapio.html" data-de="casa-verde" data-casa-link="casa-verde" data-tilt>
+          <div class="capa"><img src="assets/img/cardapio-cv-1.webp" alt="" loading="lazy" width="1400" height="1980"></div>
+          <div>
+            <span class="eyebrow">Unidade 2</span>
+            <h3>Casa Verde</h3>
+            <p>Do café da manhã à pizza da noite, com os pratos e preços da casa da Braz Leme.</p>
+            <span class="mais">Abrir o cardápio <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+      <div class="pedir revela">
+        <a class="btn btn-forno" href="https://cardapiodigital.io/pannipadariaartesanal" target="_blank" rel="noopener">Pedir online</a>
+        <p>Para levar ou receber em casa, pelo cardápio digital.</p>
       </div>
     </div>
   </section>
 
-  <!-- Eventos -->
-  <section class="secao eventos" id="eventos" aria-labelledby="eventos-titulo">
-    <div class="wrap">
-      <div class="eventos-topo">
-        <div class="cab revela">
-          <span class="eyebrow">Espaço para eventos</span>
-          <h2 id="eventos-titulo">Uma casa rústica <em>entre as árvores.</em></h2>
-          <p class="lead">Em Água Fria, na Zona Norte, com dois espaços privativos e buffet com cardápio exclusivo de comidas e bebidas.</p>
-        </div>
-        <div class="ocasioes revela" aria-label="Ocasiões">
-          <span class="chip">Mini wedding</span>
-          <span class="chip">Chá revelação</span>
-          <span class="chip">Aniversários</span>
-          <span class="chip">Bodas</span>
-          <span class="chip">Confraternização de empresa</span>
-          <span class="chip">Datas especiais</span>
-        </div>
-      </div>
-
-      <div class="espacos">
-        <article class="espaco revela">
-          <div class="foto"><img src="assets/img/eventos.jpg" alt="Salão de eventos com mesas redondas postas" loading="lazy" width="1400" height="933"></div>
-          <div class="espaco-corpo">
-            <h3><small>Térreo · acessível</small>Espazio Napoli</h3>
-            <div class="lotacao">
-              <div><strong>40</strong><span>sentados</span></div>
-              <div><strong>60</strong><span>em pé</span></div>
-            </div>
-            <p>Layout flexível, acessibilidade e banheiros exclusivos. Para festas maiores e celebrações em família.</p>
-          </div>
-        </article>
-        <article class="espaco revela">
-          <div class="foto"><img src="assets/img/vinho.jpg" alt="Amigos brindando com taças de vinho tinto" loading="lazy" width="1400" height="933"></div>
-          <div class="espaco-corpo">
-            <h3><small>Climatizado · com sacada</small>Estanza Firenze</h3>
-            <div class="lotacao">
-              <div><strong>15</strong><span>sentados</span></div>
-              <div><strong>20</strong><span>em pé</span></div>
-            </div>
-            <p>Ambiente climatizado, com sacada e banheiros exclusivos. Pensado para comemorações íntimas.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="eventos-cta revela">
-        <a class="btn btn-forno" href="https://pannipadaria.com.br/espaco-eventos/">Agendar degustação e visita</a>
-        <p>A degustação e a visita ao espaço são feitas com hora marcada.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Unidades -->
-  <section class="secao" id="unidades" aria-labelledby="unidades-titulo">
+  <!-- Onde -->
+  <section class="secao dia" id="onde" aria-labelledby="onde-titulo">
     <div class="wrap">
       <div class="cab revela">
         <span class="eyebrow">Onde estamos</span>
-        <h2 id="unidades-titulo">Duas casas <em>na Zona Norte.</em></h2>
+        <h2 id="onde-titulo">Duas casas <em>na Zona Norte.</em></h2>
       </div>
       <div class="unidades-grade">
-        <article class="unidade revela">
+        <article class="unidade revela" data-de="agua-fria">
           <h3><small>Unidade 1</small>Água Fria</h3>
-          <dl>
+          <dl class="ficha">
             <dt>Endereço</dt><dd>Rua Ismael Neri, 485<br>Água Fria, São Paulo</dd>
             <dt>Telefone</dt><dd><a href="tel:+551124761341">(11) 2476-1341</a></dd>
+            <dt>Horário</dt><dd>Todos os dias, 8h às 22h</dd>
           </dl>
           <div class="acoes">
-            <a class="btn btn-forno" href="https://www.google.com/maps/search/?api=1&amp;query=Panni+Padaria+Rua+Ismael+Neri+485+S%C3%A3o+Paulo" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-linha" href="tel:+551124761341">Ligar</a>
+            <a class="btn btn-forno" href="agua-fria/" data-casa-link="agua-fria">Ver a casa</a>
+            <a class="btn btn-linha" href="https://wa.me/551124761341" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-linha" href="https://www.google.com/maps/search/?api=1&amp;query=Panni+Padaria+Rua+Ismael+Neri+485+S%C3%A3o+Paulo" target="_blank" rel="noopener">Como chegar</a>
           </div>
         </article>
-        <article class="unidade revela">
+        <article class="unidade revela" data-de="casa-verde">
           <h3><small>Unidade 2</small>Casa Verde</h3>
-          <dl>
+          <dl class="ficha">
             <dt>Endereço</dt><dd>Av. Braz Leme, 606<br>Casa Verde, São Paulo</dd>
             <dt>Telefone</dt><dd><a href="tel:+551138569390">(11) 3856-9390</a></dd>
+            <dt>Horário</dt><dd>Todos os dias, 8h às 22h</dd>
           </dl>
           <div class="acoes">
-            <a class="btn btn-forno" href="https://www.google.com/maps/search/?api=1&amp;query=Panni+Padaria+Av+Braz+Leme+606+S%C3%A3o+Paulo" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-linha" href="tel:+551138569390">Ligar</a>
+            <a class="btn btn-forno" href="casa-verde/" data-casa-link="casa-verde">Ver a casa</a>
+            <a class="btn btn-linha" href="https://wa.me/551138569390" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-linha" href="https://www.google.com/maps/search/?api=1&amp;query=Panni+Padaria+Av+Braz+Leme+606+S%C3%A3o+Paulo" target="_blank" rel="noopener">Como chegar</a>
           </div>
         </article>
       </div>
       <div class="horario revela">
-        <span><b>Todos os dias</b> das 8h às 22h</span>
         <span><b>Almoço executivo</b> segunda a sexta, 12h às 15h</span>
         <span><b>Pizza + vinho</b> segunda a quarta, após 19h</span>
+        <span><b>Eventos</b> <a href="agua-fria/#eventos" data-casa-link="agua-fria">na unidade Água Fria</a></span>
       </div>
     </div>
   </section>
@@ -360,16 +351,16 @@
   <div class="wrap">
     <div class="rodape-topo">
       <div>
-        <a class="marca" href="#conteudo"><b>Panni</b></a>
-        <p style="margin-top:1rem;max-width:22rem">Padaria artesanal na Zona Norte de São Paulo. Sua padaria para todas as ocasiões.</p>
+        <span class="logo" role="img" aria-label="Panni Padaria Artesanal"></span>
+        <p style="margin-top:1.25rem;max-width:22rem">Padaria artesanal na Zona Norte de São Paulo. Sua padaria para todas as ocasiões.</p>
       </div>
       <div>
-        <h4>Na casa</h4>
+        <h4>As casas</h4>
         <ul>
-          <li><a href="https://pannipadaria.com.br/cardapiopanni/">Cardápio</a></li>
+          <li><a href="agua-fria/" data-casa-link="agua-fria">Água Fria</a></li>
+          <li><a href="casa-verde/" data-casa-link="casa-verde">Casa Verde</a></li>
+          <li><a href="agua-fria/#eventos" data-casa-link="agua-fria">Espaço para eventos</a></li>
           <li><a href="https://cardapiodigital.io/pannipadariaartesanal" target="_blank" rel="noopener">Pedir online</a></li>
-          <li><a href="https://pannipadaria.com.br/espaco-eventos/">Espaço para eventos</a></li>
-          <li><a href="https://pannipadaria.com.br/eventos">Agenda de eventos</a></li>
         </ul>
       </div>
       <div>
@@ -389,12 +380,12 @@
       </div>
     </div>
     <div class="rodape-base">
-      <span>© <span id="ano">2026</span> Panni Padaria Artesanal</span>
+      <span>© <span class="ano">2026</span> Panni Padaria Artesanal</span>
       <span>Água Fria · Casa Verde · São Paulo, SP</span>
     </div>
   </div>
 </footer>
 
-<script src="assets/js/app.js?v=1"></script>
+<script src="assets/js/app.js?v=2"></script>
 </body>
 </html>
